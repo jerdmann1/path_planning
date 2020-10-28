@@ -175,6 +175,16 @@ void get_commands(int commands[50], char room[17][11], int goal[2], int start[2]
                 commands[i++] = 2;
                 commands[i++] = 1;
                 orientation = 1;
+            }else if(comm == 2 && orientation == -2){
+                commands[i++] = 2;
+                commands[i++] = 2;
+                commands[i++] = 1;
+                orientation = 2;
+            }else if(comm == -2 && orientation == 2){
+                commands[i++] = 2;
+                commands[i++] = 2;
+                commands[i++] = 1;
+                orientation = -2;
             }
         }else{
             commands[i++] = 1;
